@@ -34,6 +34,12 @@ class Book(models.Model):
         blank=True,
         default=None,
     )
+    publish_year = models.IntegerField(
+        "Publication year",
+        null=True,
+        blank=True,
+        default=None,
+    )
 
     def __str__(self):
         return self.title
