@@ -26,8 +26,6 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('title', models.CharField(max_length=1000, verbose_name='Title')),
                 ('publish_year', models.IntegerField(blank=True, default=None, null=True, verbose_name='Publication year')),
-                ('abstract', models.TextField(blank=True, default=None, max_length=1000, null=True, verbose_name='Abstract')),
-                ('useless_field', models.CharField(blank=True, default=None, max_length=10, null=True, verbose_name='Useless Field')),
                 ('author', models.ForeignKey(blank=True, default=None, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='books', to='library.author')),
             ],
         ),
