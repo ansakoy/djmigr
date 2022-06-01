@@ -1,3 +1,4 @@
+
 from django.db import models
 
 
@@ -36,6 +37,20 @@ class Book(models.Model):
     )
     publish_year = models.IntegerField(
         "Publication year",
+        null=True,
+        blank=True,
+        default=None,
+    )
+    abstract = models.TextField(
+        "Abstract",
+        max_length=1000,
+        null=True,
+        blank=True,
+        default=None,
+    )
+    useless_field = models.CharField(
+        "Useless Field",
+        max_length=10,
         null=True,
         blank=True,
         default=None,
